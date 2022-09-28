@@ -86,6 +86,7 @@ nav {
     display: flex;
     align-items: center;
     background-color: #fafafa;
+    z-index: 10;
 
     /* 
     height with % doesn't work if you didn't give height values for its parant. **height with % will alway ask for the values of the parent 
@@ -197,6 +198,8 @@ h2 {margin-bottom: 0;}
     margin-top: 1.2em;
     padding-inline-start: 0;
 }
+
+
 
 .logotypes ul {
     list-style: none;
