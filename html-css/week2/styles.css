@@ -1,13 +1,21 @@
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
-body {font-family: 'Poppins', sans-serif;}
+body {
+    font-family: 'Poppins', sans-serif;
+}
 
-html {scroll-padding-top: 4.4em;} /* height of sticky header ref:https://stackoverflow.com/questions/4086107/fixed-page-header-overlaps-in-page-anchors */
-
+html {
+    scroll-padding-top: 4.4em; /* height of sticky header ref:https://stackoverflow.com/questions/4086107/fixed-page-header-overlaps-in-page-anchors */
+} 
 
 /* HEADER SECTION */
 
-.indent-left {padding-left: 10%;}
+.indent-left {
+    padding-left: 10%;
+}
 
 header {
     background: #fafafa;
@@ -17,7 +25,10 @@ header {
     padding: 1.25em 1.5em 1.25em 0; 
 }
 
-.header-paragrah {margin: 0px;}
+.header-paragrah {
+    margin: 0;
+    color:#858585;
+}
 
 h1 {
     color: #121212;
@@ -25,8 +36,6 @@ h1 {
     margin-bottom: 0;
     white-space: pre-line;
 }
-
-p {color:#858585;}
 
 .animation-wordchanges::after {
     content: ""; /* leave it empty to add the content in keyframe animation */
@@ -117,7 +126,9 @@ nav a {
     margin-right: 1.8em;
 }
 
-nav a:hover {color:#858585;}
+nav a:hover {
+    color:#858585;
+}
 
 /* IMAGE SECTION */
 img {
@@ -129,14 +140,18 @@ img {
 
 /* CONTENTS SECTIONS */
 
-h2, h3 {color: black; }
+h2, h3 {
+    color: black; 
+    padding: .6em 0 .6em 0;
+}
 
-h2 {margin-bottom: 0;}
+h2 {
+    margin-bottom: 0;
+}
 
 .contents {
     width: 100%; 
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center; /* this helps to not set margin or padding on the right and left side */
     gap: 5.5em;
@@ -153,11 +168,17 @@ h2 {margin-bottom: 0;}
     margin-top: 1.25em;
 }
 
-.gallery, .logotypes {order: 2;}
+.gallery, .logotypes {
+    order: 2;
+}
 
-.about-us, .gallery {width: 30%;}
+.about-us, .gallery {
+    width: 30%;
+}
 
-.pratical, .logotypes {width: 45%;}
+.pratical, .logotypes {
+    width: 45%;
+}
 
 .paragrah-aboutus, .paragrah-pratical, .paragrah-gallery {
     white-space: pre-line;
@@ -166,12 +187,17 @@ h2 {margin-bottom: 0;}
 
 .paragrah-aboutus, .paragrah-gallery {
     font-size: 1.1em;
-    white-space: pre-line;
 }
 
-.paragrah-pratical {font-size: 19px;}
+.paragrah-pratical {
+    font-size: 1.18;
+}
 
  /* GALLERY SECTION */
+
+ .img-gallery{
+    margin-top: 1.5em;
+ }
 
  .img-gallery ul {
     display: flex;
@@ -213,11 +239,11 @@ h2 {margin-bottom: 0;}
     max-height: 7.8em;
 }
 
-.icons{
+.icons {
     filter: grayscale(100%) brightness(75%);
 }
 
-.icons:hover{
+.icons:hover {
     filter: grayscale(0%) brightness(115%);
     cursor: pointer;
 }
@@ -241,36 +267,35 @@ footer {
 .footer-paragrah {
     color: white;
     white-space: pre-line;
-    margin: -20px;
+    margin: 0;
     padding: 0;
 }
-
-
-
-
 
 .footer-info {
     margin: 1em;
     width: 20%;
 }
 
-.footer-info ul, .footer-link-contents {padding: 0;}
+.footer-info ul, .footer-link-contents { 
+    padding: 0;
+}
 
 .footer-info ul li, .footer-link-contents a {
     color: white;
     list-style: none;
-    padding: 10px 0 10px 0;
+    padding: .6em 0 .6em 0;
     text-decoration: none;
 }
 
-.footer-paragrah {margin: 0;}
 
 .footer-link-contents {
     display: flex;
     flex-direction: column;
 }
 
-.text-underline {border-bottom: 1px solid #818181;}
+.text-underline {
+    border-bottom: 1px solid #818181;
+}
 
 h4 {
     color: white;
@@ -279,15 +304,17 @@ h4 {
 }
 
 .history {
-    margin-left: 20px;
+    margin-left: 1.25em;
 }
+
 .wrapper-iframe {
-    margin-top: 30px;
+    margin-top: 1.9em;
 }
 
 .map {
     width: 80%;
     height: 50%;
+    border: none;
 }
 
 
@@ -309,7 +336,9 @@ h4 {
 
 @media screen and (max-width: 768px) {
 
-    .indent-left {padding-left: 3.1em;}
+    .indent-left {
+        padding-left: 3.1em;
+    }
 
     img {
 
@@ -324,27 +353,47 @@ h4 {
         gap: 1em;
     }
 
-    .about-us, .gallery, .pratical, .logotypes {width: 100%;}
+    .about-us, .gallery, .pratical, .logotypes {
+        width: 100%;
+    }
 
     /* since I am using order property at the beginning so when I make resonsive webpage it makes me easier to moving contents*/
 
-    .pratical {order: 1;}
+    .pratical {
+        order: 1;
+    }
 
-    .about-us {order: 2;}
+    .about-us {
+        order: 2;
+    }
 
-    .paragrah-aboutus, .paragrah-gallery {white-space: normal;}
+    .paragrah-aboutus, .paragrah-gallery {
+        white-space: normal;
+    }
 
-    .paragrah-pratical, .paragrah-aboutus, .paragrah-gallery {font-size: 15px}
+    .paragrah-pratical, .paragrah-aboutus, .paragrah-gallery {
+        font-size: .9em;
+    }
 
-    .logo {justify-content: center;}
+    .logo {
+        justify-content: center;
+    }
  
-    .footer {flex-wrap: wrap;}
+    .footer {
+        flex-wrap: wrap;
+    }
 
-    .footer-paragrah, .footer-info ul li, .footer-link-contents {font-size: 12px;}
+    .footer-paragrah, .footer-info ul li, .footer-link-contents {
+        font-size: .75em;
+    }
 
-    .footer-info {width: 35%;} /* make elements with flex display have only 2 rows becasue parant of footer-info is width 100% */
+    .footer-info {
+        width: 35%; /* make elements with flex display have only 2 rows becasue parant of footer-info is width 100% */
+    } 
 
-    h4 {font-size: 10px;}
+    h4 {
+        font-size: .7em;
+    }
    
 }
 
@@ -356,13 +405,15 @@ h4 {
         scroll-padding-top: 12.5em; 
     }
 
-    header {text-align: center;}
+    header {
+        text-align: center;
+    }
 
     nav {
         flex-direction: column;
         width: 100%; /* make nav and nav a with width 100% so when you fill in background color in hover, it cover all the way from start to the end. */
         height: auto; /* the height cover the contents */
-        padding: 10px 0 10px 0;
+        padding: .6em 0 .6em 0;
         background-color: #fafafa;
     }
 
@@ -372,22 +423,35 @@ h4 {
         padding: 0 ;
         margin: 0;
         text-align: center;
-        padding: 10px 0 10px 0;
+        padding: .6em 0 .6em 0;
     }
 
-    nav a:hover {background-color: rgb(207, 235, 245);}
+    nav a:hover {
+        background-color: rgb(207, 235, 245);
+    }
 
-    .navbar {padding-left: 0;}
+    .navbar {
+        padding-left: 0;
+    }
 
-    .contents {padding: 0 30px 0 30px;}
+    .contents {
+        padding: 0 1.8em 0 1.8em;
+    }
 
-    h2 {font-size: 18px;}
+    h2 {
+        font-size: 1.12em;
+    }
     
-    .logotypes ul {gap: 1em;}
+    .logotypes ul {
+        gap: 1em;
+    }
     
-    .footer-info {width: 100%;} /* make elements with flex display have only 1 row*/
+    .footer-info {
+        width: 100%; /* make elements with flex display have only 1 row*/
+    } 
 
-    .footer {text-align: center;}
+    .footer {
+        text-align: center;
+    }
     
 }
-
