@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../week3/assets/rainbow.png" alt="logo-img">
+            <p class="logo-text">Fashion</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Sign up to yourcustomtailor.com</h1>
+        <h2>Step 2/4 - tell us who you are?</h2>
+        <div class="progress-bar">
+            <p class="progress-text">Progress</p>
+            <div class="progress-fill">
+                <span class="loading-progress-two"></span>
+            </div>
+            <p class="signup-paragrah">Nice to meet you. Let’s spend a minute to get to know each other? Please enter the following:</p>        
+        </div>
+    </section>
+
+    <form action="index3.html" method="get">
+        <div class="form-fill-in">
+            <div class="contacts">
+                <div class="email-wrapper">
+                    <label for="email">Email<span>*</span></label>
+                    <input type="email" class="fill-in" id="email" name="e-mail" required>
+                </div>
+                <div class="phone-wrapper">
+                    <label for="phone">phone<span>*</span></label>
+                    <input type="text" class="fill-in" id="phone" name="phone-number" pattern="[0-9]+" title="Can only contains number" >
+                </div>
+            </div>
+            <div class="password">
+                <label for="password">Password<span>*</span></label>
+                <input type="password" class="fill-in password-input" id="password" name="pass-word" pattern="^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{10,}$" title="Password should contains minimum 10 digits, at least one uppercase and lowercase" required>
+            </div>
+            <div class="re-password">
+                <label for="re-password">Re-entry Password<span>*</span></label>
+                <input type="password" class="fill-in re-password-input" id="re-password" name="pass-word" pattern="^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{10,}$" title="Please make sure your password match" required>
+            </div>
+
+            <div class="newsletter">
+                <p class="sign-up-paragrah">I want to sign up for the newsletter</p>
+                <div class="following">
+                    <div class="following-newsletter">
+                        <label class="order-weekly-label" for="weekly-letter">Weekly news</label>
+                        <div class="signup-radio-border order-weekly-btn">
+                            <input type="radio" class="newsletter-btn" id="weekly-letter" name="news-letter" value="weekly" required>
+                        </div>
+                    </div>
+                    <div class="following-newsletter">
+                        <label class="order-monthly-label" for="monthly-letter">Monthly news</label>
+                        <div class="signup-radio-border order-monthly-btn">
+                            <input type="radio" class="newsletter-btn" id="monthly-letter" name="news-letter" value="monthly">  
+                        </div>
+                    </div>
+                    <div class="following-newsletter">
+                        <label class="order-none-label" for="no-letter">Don't send me news</label>
+                        <div class="signup-radio-border order-none-btn">
+                            <input type="radio" class="newsletter-btn" id="no-letter" name="news-letter" value="none"> 
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="validation">
+            <button class="validation-btn" type="submit">Check Validation</button>
+        </div>
+   
+    </form>
+    
+    <div class="change-page"> 
+        <a class="change-page-btn previous" href="index.html">Previous page</a>
+        <a class="change-page-btn" href="index3.html">Next page</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../week3/assets/rainbow.png" alt="logo-img">
+            <p class="logo-text">Fashion</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Sign up to yourcustomtailor.com</h1>
+        <h2>Step 3/4 - time to learn about your preferences?</h2>
+        <div class="progress-bar">
+            <p class="progress-text">Progress</p>
+            <div class="progress-fill">
+                <span class="loading-progress-three"></span>
+            </div>
+            <p class="signup-paragrah">Nice to meet you. Let’s spend a minute to get to know each other? Please enter the following:</p>        
+        </div>
+    </section>
+
+    <form action="index.html" method="get">
+        <div class="kind-of-items">
+            <p>What kind of items are you interested in offers on?</p>
+            <div class="offers">
+                <div class="offers-left-side">
+                    <div class="offers-flex">
+                        <label for="apparal">Apparal</label>
+                        <input type="checkbox" id="apparal" name="interested-offers" value="apparal-item">
+                    </div>
+                    <div class="offers-flex">
+                        <label for="accessories">Accessories</label>
+                        <input type="checkbox" id="accessories" name="interested-offers" value="accessories-item">
+                    </div>
+                    <div class="offers-flex">
+                        <label for="handbags">Handbags</label>
+                        <input type="checkbox" id="handbags" name="interested-offers" value="handbags-item">
+                    </div>
+                </div>
+            
+                <div class="offers-right-side">
+                    <div class="offers-flex">
+                        <label for="jawelry">Jewelry</label>
+                        <input type="checkbox" id="jawelry" name="interested-offers" value="jewelry-item">
+                    </div>     
+                    <div class="offers-flex">
+                        <label for="shoes">Shoes</label>
+                        <input type="checkbox" id="shoes" name="interested-offers" value="shoes-item">
+                    </div>
+                </div>        
+            </div>
+        </div>
+
+        <div class="resemble-your-style">
+            <p>Choose the images that best resemble your styles</p>
+            <div class="interested-offer-wrapper">
+                <div class="interested-choosen">
+                    <img class="img-your-styles" src="../week3/assets/accessories-min.jpg" alt="necklace">
+                    <div class="styles-options">
+                        <label for="necklace-option">Select</label>
+                        <input type="checkbox" id="necklace-option" name="resemble" value="necklace">
+                    </div>
+                </div>
+                <div class="interested-choosen">
+                    <img class="img-your-styles" src="../week3/assets/lensabl-0GfPlommtxM-unsplash.jpg" alt="glasses">
+                    <div class="styles-options">
+                        <label for="glasses-option">Select</label>
+                        <input type="checkbox" id="glasses-option" name="resemble" value="glasses">
+                    </div>
+                </div>
+                <div class="interested-choosen">
+                    <img class="img-your-styles" src="../week3/assets//bag-min.jpg" alt="bag">
+                    <div class="styles-options">
+                        <label for="bag-option">Select</label>
+                        <input type="checkbox" id="bag-option" name="resemble" value="bag">
+                    </div>
+                </div>
+                <div class="interested-choosen">
+                    <img class="img-your-styles" src="../week3/assets//bracelet-min.jpg" alt="bracelet">
+                    <div class="styles-options">
+                        <label for="bracelet-option">Select</label>
+                        <input type="checkbox" id="bracelet-option" name="resemble" value="bracelet">
+                    </div>
+                </div>
+                <div class="interested-choosen">
+                    <img class="img-your-styles" src="../week3/assets/ring.jpg" alt="cosmestic">
+                    <div class="styles-options">
+                        <label for="cosmetic-option">Select</label>
+                        <input type="checkbox" id="cosmetic-option" name="resemble" value="cosmestic">
+                    </div>
+                </div>
+                <div class="interested-choosen">
+                    <img class="img-your-styles" src="../week3/assets/earring.jpg" alt="earring">
+                    <div class="styles-options">
+                        <label for="earring-option">Select</label>
+                        <input type="checkbox" id="earring-option" name="resemble" value="earring">
+                    </div>
+                </div>
+                <div class="interested-choosen">
+                    <img class="img-your-styles" src="../week3/assets/high-heel.jpg" alt="shoes">
+                    <div class="styles-options">
+                        <label for="shoes-option">Select</label>
+                        <input type="checkbox" id="shoes-option" name="resemble" value="shoes">
+                    </div>
+                </div>
+                <div class="interested-choosen">
+                    <img class="img-your-styles" src="../week3/assets/watch-min.jpg" alt="watch">
+                    <div class="styles-options">
+                        <label for="watch-option">Select</label>
+                        <input type="checkbox" id="watch-option" name="styles" value="watch">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="validation">
+            <button class="validation-btn" type="submit">Check Validation</button>
+        </div> 
+
+    </form>
+
+    <div class="change-page"> 
+        <a class="change-page-btn" href="index2.html">Previous Page</a>
+    </div>
+
+   
+</body>
+</html>

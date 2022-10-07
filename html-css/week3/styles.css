@@ -1,0 +1,525 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: whitesmoke;
+}
+
+
+/* section form */
+
+/* global tag */ 
+
+form {
+    margin: 0 1em 0 3em;
+}
+
+div {
+    margin: 1em 0 1em 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 2em 0 2em;
+    background-color: orange;
+    width: 100%;
+    height: 5em;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    width: 70%;
+    font-family: 'Abril Fatface', cursive;
+    text-transform: uppercase;
+}
+
+nav {
+    width: 30%;
+    font-family: 'Abril Fatface', cursive;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+ul li:hover {
+    cursor: pointer;
+}
+
+label, .profile-header {
+    font-size: .8em;
+    align-self: center;
+    font-weight: bold;
+}
+
+.fill-in, select {
+    border-radius: .2em;
+    border: 1px solid rgb(182, 182, 182); 
+    height: 2.8em;
+    background: rgba(255, 255, 255, 0.5);
+    color: rgb(141, 140, 140);
+    width: 50%;
+    margin-left: 2em;
+}
+
+.form-fill-in {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 7em;
+}
+
+span {
+    color: red;
+}
+
+.change-page {
+    display: flex;
+    justify-content: center;
+}
+
+.change-page-btn {
+    padding: .8em;
+    text-align: center;   
+    background: black;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: .9em;
+}
+
+.previous {
+    margin-right: 2em;
+}
+
+.validation {
+    display: flex;
+    justify-content: end;
+    margin-right: 3em;
+}
+
+.validation-btn {
+    background-color: orange;
+    padding: .8em;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid orange;
+    font-weight: bold;
+}
+
+.validation-btn:hover {
+    cursor: pointer;
+}
+
+
+/* section one: introduction & section two: progress bar*/ 
+
+section {
+    padding: 1em 1em 0 2em;
+    font-size: 1.5em;
+    color: black;
+}
+
+h1, h2 {
+    font-size: 1.5em;
+}
+
+.signup-paragrah {
+    white-space: pre-line;
+    line-height: 2;
+    font-size: .8em;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+
+ /* Progress Bar */
+
+.progress-header {
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.progress-fill {
+    width: 100%;
+    height: 2em;
+    background: rgb(223, 222, 222);
+}
+
+.loading-progress-one {
+    height: 2em;
+    animation: loading-one 2s forwards;
+    /* because css animation doesn't work with span so we need to add inline-bloack for this 
+    ref: https://stackoverflow.com/questions/37730284/css-animation-not-working-on-span-with-animate-css*/
+    display: inline-block; 
+}
+
+.loading-progress-two {
+    height: 2em;
+    animation: loading-two 2s forwards;
+    display: inline-block; 
+}
+
+.loading-progress-three {
+    height: 2em;
+    animation: loading-three 2s forwards;
+    display: inline-block;
+}
+
+
+@keyframes loading-one {
+    from {
+        width: 0; /*if not set width: 0 here. the animation will start aniamtion til the end of element and then back to 25% as you set for above line*/
+    }
+    to {
+        background: rgb(252, 186, 64);
+        width: 25%;
+    }
+}
+
+@keyframes loading-two {
+    from {
+        width: 0; 
+    }
+    to {
+        width: 50%;
+        background: rgb(252, 186, 64);    
+    }
+}
+
+@keyframes loading-three {
+    from {
+        width: 0; 
+    }
+    to {
+        background: rgb(252, 186, 64);
+        width: 75%;
+    }
+}
+
+
+/* form */
+
+.fullname div, .address div, .contacts div, .phone div {
+    width: 50%;
+    margin-left: 2em;
+}
+
+.first-name-wrapper, .last-name-wrapper, .address-wrapper, .postcode-wrapper, .email-wrapper, .phone-wrapper,
+.fullname, .address, .contacts {
+    display: flex;   
+}
+
+.first-name-wrapper, .address-wrapper, .email-wrapper {
+    justify-content: end;
+}
+
+.countries, .password, .re-password {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+}
+
+
+/* Countries Selection Section */
+
+.country-select {
+    width: 48%;
+}
+
+option {
+    font-size: 1em;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align-last: center;
+}
+
+
+/* Description Section */
+
+.description-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.profile-header {
+    align-self: flex-end;
+}
+
+.des-content-one {
+   display: flex;
+   flex-direction: column;
+   width: 25%;
+   align-items: flex-end;
+}
+
+.short-des {
+    font-size: .8em;
+    font-style: italic;
+    white-space: pre-line;
+}
+
+.des-content-two {
+    width: 75%;
+}
+
+textarea {
+    border-radius: .2em;
+    border: 1px solid rgb(182, 182, 182);
+    background: rgba(255, 255, 255, 0.5);
+    margin: 1.5em;
+    width: 80%;
+}
+
+/* Shipping  Section */
+
+.shipping-wrapper {
+    display: flex;
+    width: 25%;
+    justify-content: end;
+}
+
+
+/* page 2 */
+
+.password-input {
+    width: 48%;
+}
+
+.re-password-input {
+    width: 48%;
+}
+
+.newsletter {
+    position: relative;
+    left: 10%;
+}
+
+.following {
+    display: flex;
+    margin: 0;
+}
+
+.following-newsletter {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.signup-radio-border {
+    border: 1px solid;
+    width: fit-content;
+    margin: 1em;
+    color: gray;
+}
+
+.newsletter-btn {
+    margin: .5em;
+}
+
+.order-weekly-label {
+    order: 1;
+}
+
+.order-weekly-btn {
+    order: 2;
+}
+
+/* page 3 */
+
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5em;
+}
+
+.offers-flex {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.offers-left-side, .offers-right-side {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.interested-offer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1em;
+}
+
+.interested-choosen {
+    width: 20%;
+    margin-left: 2em;
+}
+
+.styles-options {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.img-your-styles {
+    max-width: 100%; 
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* responsive section */
+
+@media screen and (max-width: 1120px) {
+
+    .form-fill-in {
+        width: 90%;
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+/* Tablet & mobile */ 
+@media screen and (max-width: 768px) {
+
+    
+    /* global tag */ 
+
+    nav {
+        display: none;
+    }
+
+    h1, h2 {
+        font-size: 1em;
+    }
+
+    .fullname div, .address div, .contacts div, .phone div {
+        width: 100%;
+    }
+
+    .first-name-wrapper, .last-name-wrapper, .address-wrapper, .postcode-wrapper, .email-wrapper, .phone-wrapper,
+    .fullname, .address, .contacts {
+        justify-content: start;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .countries, .password, .re-password, .description-wrapper {
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+        margin-left: 2em;
+    }
+
+    .fill-in, .country-select {
+        width: 80%;
+        margin: .5em 0 .5em 0;
+    }
+
+    label {
+        align-self: normal;
+    }
+
+    .validation {
+        justify-content: center;
+        margin-right: 0;
+        padding: 0;
+    }
+    
+    .change-page {
+        margin-right: 0;
+    }
+
+    /* page 1 */
+
+    select {
+        margin-left: 0;
+    }
+
+    .description-wrapper {
+        display: block;
+    }
+
+   .des-content-one {
+    width: 100%;
+    display: block;
+   }
+
+   .des-content-two {
+    width: 100%;
+   }
+
+   .short-des {
+    white-space: normal;
+   }
+   
+   textarea {
+    width: 80%;
+   }
+
+   .shipping-wrapper {
+    width: 80%;
+    justify-content: start;
+    margin-left: 2em;
+   }
+
+   /* page 2 */ 
+
+   .newsletter {
+    left: 0;
+   }
+
+   .following {
+    flex-direction: column;
+   }
+
+   .signup-radio-border {
+    border: none;
+    margin: 0 1em 0 1em;
+    justify-content: end;
+   }
+
+   .order-weekly-label, .order-monthly-label, .order-none-label {
+    order: 2;
+   }
+
+   .order-weekly-btn, .order-monthly-btn, .order-none-btn {
+    order: 1;
+   }
+
+   .order-weekly-label, .order-monthly-label, .order-none-label {
+    align-self: center;
+   }
+   
+
+    /* page 3 */ 
+
+    .offers-left-side, .offers-right-side {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .interested-offer-wrapper {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .interested-choosen {
+        justify-content: center;
+        width: 30%;
+        margin: auto;
+    }
+}

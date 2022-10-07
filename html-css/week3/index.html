@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="../week3/assets/rainbow.png" alt="logo-img">
+            <p class="logo-text">Fashion</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Sign up to yourcustomtailor.com</h1>
+        <p class="signup-paragrah">
+            We can't wait to help you improve your life-style and gain the attention from people around 
+            you!
+
+            Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy
+            picking the best offers that match your preferences and style. Every week we will send you a
+            hand-picked selection - we just need to know a few details about your first...
+        </p>
+    </section>
+
+    <section>
+        <h2>Step 1/4 - tell us who you are?</h2>
+        <div class="progress-bar">
+            <p class="progress-header">Progress</p>
+            <div class="progress-fill">
+                <span class="loading-progress-one"></span>
+            </div>
+            <p class="signup-paragrah">Nice to meet you. Let’s spend a minute to get to know each other? Please enter the following:</p>        
+        </div>
+    </section>
+
+    <form action="index2.html" method="get">
+        <div class="form-fill-in">
+            <div class="fullname">
+                <div class="first-name-wrapper">
+                    <label class="firstname-text" for="firstname">First name<span>*</span></label>
+                    <input type="text" class="fill-in" id="firstname" name="first-name" pattern="[a-zA-Z]+" title="Can only contains charecters" required>
+                </div>
+                <div class="last-name-wrapper">
+                    <label class="lastname-text" for="lastname">Last name<span>*</span></label>
+                    <input type="text" class="fill-in" id="lastname" name="last-name" pattern="[a-zA-Z]+" title="Can only contains charecters" required>
+                </div>
+            </div>
+
+            <div class="countries">
+                <label for="select-country">Country<span>*</span></label>
+                <select class="country-select" name="country" id="select-country" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="D">Denmark</option>
+                    <option value="S">Sweden</option>
+                    <option value="N">Norway</option>
+                    <option value="EU">EU</option>
+                </select>
+            </div>
+
+            <div class="address">
+                <div class="address-wrapper">
+                    <label for="streetaddress">Street address<span>*</span></label>
+                    <input type="text" class="fill-in" id="streetaddress" name="street-address" required>
+                </div>
+                <div class="postcode-wrapper">
+                    <label for="postcode">Post Code<span>*</span></label>
+                    <input type="text"  class="fill-in" id="postcode" name="post-code" minlength="4" maxlength="4" pattern="[0-9]+" title="Can only contains numeric value" required>
+                </div>
+            </div>
+
+            <div class="description">
+                <div class="description-wrapper">
+                    <div class="des-content-one">
+                        <p class="profile-header">Profile description</p>
+                        <p class="short-des">
+                        Please provide a short
+                        description of yourself to be
+                        displayed on our social
+                        community pages.</p>
+                    </div>
+                    <div class="des-content-two">
+                        <textarea name="des" id="comment" cols="90" rows="10" maxlength="500"></textarea>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="shipping">
+                <p>Use the same address for billing and shipping? Uncheck below to fill out a separate shipping address.</p>
+                <div class="shipping-wrapper">
+                    <label for="shippingaddress">Shipping address</label>
+                    <input type="checkbox" id="shippingaddress" name="shipping-address" value="shipping-address" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="validation">
+            <button class="validation-btn" type="submit">Check Validation</button>
+        </div>
+
+    </form>
+
+    <div class="change-page"> 
+        <a class="change-page-btn" href="index2.html">Next page</a>
+    </div>
+    
+</body>
+</html>
