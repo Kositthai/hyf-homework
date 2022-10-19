@@ -1,0 +1,1 @@
+const myFreeCodeCamp = 'https://www.freecodecamp.org/Vipavee';
