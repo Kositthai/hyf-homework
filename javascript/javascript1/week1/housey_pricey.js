@@ -1,16 +1,16 @@
-let width = parseInt(prompt('Enter width of the property'));
-let deep = parseInt(prompt('Enter depth of the property'));
-let high = parseInt(prompt('Enter height of the property'));
-let gardenSizeInM2 = parseInt(prompt('Enter size of garden of the property'));
-let price = parseInt(prompt('Enter your house price'));
-let volumeInMeters = width * deep * high;
-let housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
+const width = parseInt(prompt('Enter width of the property'));
+const dept = parseInt(prompt('Enter depth of the property'));
+const height = parseInt(prompt('Enter height of the property'));
+const gardenSizeInM2 = parseInt(prompt('Enter size of garden of the property'));
+const price = parseInt(prompt('Enter your house price'));
 
 
 function housey_pricy () {
+    const volumeInMeters = width * dept * height;
+    let housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
     // dont need to pass in comparison operator because if user fill in is equal to truthy value
     // falsy equal "empty string" 0, undefined, Nan, Null 
-    if (width && deep && high && gardenSizeInM2 && price) {  
+    if (width && dept && height && gardenSizeInM2 && price) {  
         if (housePrice > price) {
             alert(`Cheap price! Your house price calculated is ${housePrice}`)
         } else {
@@ -22,4 +22,4 @@ function housey_pricy () {
     }
 }
 
-housey_pricy(housePrice); 
+housey_pricy(width, dept, height, gardenSizeInM2, price); 
