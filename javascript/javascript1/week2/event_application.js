@@ -6,7 +6,7 @@ function upcomingEvent(passInDate) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
+    "Saturday"
   ];
   const today = new Date();
   const weekday = today.getDay();
