@@ -1,17 +1,15 @@
 const boughtCandyPrices = [];
 let amountToSpend = Math.floor(Math.random() * 100);
+const candyTable = {
+  sweet: 0.5,
+  chocolate: 0.7,
+  toffee: 1.1,
+  chewingGum: 0.03,
+};
+const candyTableKeys = Object.keys(candyTable);
+const candyTableValues = Object.values(candyTable);
 
 function addCandy(candyType, weight) {
-  const candyTable = {
-    sweet: 0.5,
-    chocolate: 0.7,
-    toffee: 1.1,
-    chewingGum: 0.03,
-  };
-
-  const candyTableKeys = Object.keys(candyTable);
-  const candyTableValues = Object.values(candyTable);
-
   for (let i = 0; i < candyTableKeys.length; i++) {
     if (candyType === candyTableKeys[i]) {
       let total = weight * candyTableValues[i];
