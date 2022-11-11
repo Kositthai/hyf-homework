@@ -1,22 +1,26 @@
+// save note
 const notes = [];
 
 function saveNote(content, id) {
   notes.push({ content, id });
 }
 
+saveNote("Shopping", 1);
 saveNote("Pick up groceries", 2);
-saveNote("Shopping", 3);
+console.log(notes)
 
 // Unique feature // 
 function removeNote(content, id) {
-  let removeItem = notes.find(
-    (element) => element.content === content && element.id === id)
-    console.log(removeItem)
+  
+  const removeItem = notes.find((element) => 
+  element.content === content && element.id === id)
+
     if(removeItem === undefined){
-      console.log('cannot find this information'); 
+      console.log('Cannot find this information'); 
     } else { 
-      let indexOfRemoveItem = notes.indexOf(removeItem);
-      notes.splice(indexOfRemoveItem, 1)
+      const indexOfRemoveItem = notes.indexOf(removeItem);
+      notes.splice(indexOfRemoveItem, 1);
+      return console.log('Remove note successfully.')
     }
 }
 
@@ -24,23 +28,27 @@ removeNote('Shopping', 1)
 console.log(notes);
 
 function getNote(id) {
-  //I tried this many time with find() && filter () method but doesnt work
-  // because I used thoese methods outside the function and used thoese method callback functionName
-  // after that ** rememeber to return the value , otherwise undefind.
-  let getInfoByID = notes.find((element) => element.id === id);
-  return getInfoByID;
+
+  for(element of notes){
+    if(id === element.id){
+      return element; 
+    } else if (id !== element.id) {
+      return 'This id does not exist'; 
+    } else return 'Do not have any notes, please creating a note'; 
+  }  
 }
 
 // I added this variable here becuase I need to get a list of notes first to get the retsult after calling getNote function
 // I did put this variable on the second line but it return me undefind because JS read code from top to below
-const firstNote = getNote(1);
-console.log(firstNote);
+const firstNote = getNote(2); 
+console.log(firstNote); 
+
 
 function logOutNotesFormatted() {
+
   for (const element of notes)
-    console.log(
-      `The note with id: ${element.id}, has following note text: ${element.content}`
-    );
+    console.log(`The note with id: ${element.id}, has following note text: ${element.content}`);
+    
 }
 
  logOutNotesFormatted()
