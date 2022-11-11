@@ -4,16 +4,15 @@ const travelInformation = {
   };
   
 function travelTimes(speed, distance){
-    let timetoTravel = distance / speed;
-    let splitNumber = (timetoTravel.toString().split('.')); 
-    let test = (splitNumber[0] * 60) + +splitNumber[1];
-    let hours = Math.floor(test / 60); 
-    let minute = test % 60;
-    console.log(`${hours} hours and ${minute} minutes`)
+    const timetoTravel = distance / speed;
+    const splitNumber = (timetoTravel.toString().split('.')); 
 
+    const getHours= splitNumber[0]
+    const getMinutes = Math.floor(splitNumber[1] / 100 * 60)
+   
+    console.log(`${getHours} hours and ${getMinutes} minutes`)
     
 }
 
 travelTimes(travelInformation.speed, travelInformation.destinationDistance);
-
 
