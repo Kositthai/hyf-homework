@@ -5,7 +5,7 @@ const getTheMonth = aDate.getMonth() + 1;
 const getTheYear = aDate.getFullYear();
 const today = `${getTheDate}/${getTheMonth}/${getTheYear}`;
 const limitUsage = 60;
-const totalLength = activities;
+
 
 function addActivity(date, activity, duration) {
   activities.push({ date, activity, duration });
@@ -21,12 +21,12 @@ function showStatus(activities) {
     sum += element.duration;
   }
 
-  if (showStatus && totalLength.length > 0) {
+  if (activities.length > 0) {
     if (sum > limitUsage) {
       console.log("You have reached your limit, no more smartphoning for you!");
     } else {
       console.log(
-        `You have added ${totalLength.length} activities. They amount to ${sum} mins. of usage`
+        `You have added ${activities.length} activities. They amount to ${sum} mins. of usage`
       );
     }
   } else {
@@ -35,3 +35,4 @@ function showStatus(activities) {
 }
 
 showStatus(activities);
+
