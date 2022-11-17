@@ -1,0 +1,16 @@
+.dark-mode {
+    background: #222;
+}
+
+i {
+    color: white;
+}
+
+button {
+    background: #222;
+    border: 2px rgb(144, 142, 142);
+    border-radius: 10%;
+    box-sizing: content-box;
+    padding: 10px;
+    width: 30px;
+}
