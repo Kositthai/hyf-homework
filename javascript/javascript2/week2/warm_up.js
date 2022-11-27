@@ -12,8 +12,8 @@ console.log(`The double numbers are ${newNumbers}`);
 const movieName = [
   { title: "The three men and the pistol", year: 1980, rating: 7 },
   { title: "Chase three - The final chase", year: 1981, rating: 5 },
-  { title: "Surfer", year: 1982, rating: 6 },
-  { title: "Alien", year: 2005, rating: 3 },
+  { title: "Surfer 2", year: 1982, rating: 6 },
+  { title: "The Alien", year: 2005, rating: 3 },
   { title: "The Benjamin", year: 2014, rating: 8 },
   { title: "Boat", year: 1979, rating: 9 },
 ];
@@ -27,7 +27,7 @@ const longTitle = movieName.filter(element => element.title.split(" ").length > 
 console.log(longTitle)
 
 // (3)
-const movieYearMade = movieName.filter(element => element.year >= 1980 && element.year <= 1989);
+const movieYearMade = movieName.filter(element => element.year >= 1980 && element.year <= 1989).length;
 console.log(movieYearMade)
 
 // (4)
@@ -47,13 +47,17 @@ console.log(movieRateMoreThanSix)
 // (6)
 const contain = ["surfer", "alien", "benjamin"];
 let total = 0;
+
 const countTotalMovie = movieName
   .map((element) => element.title.toLowerCase())
   .filter((element) => {
-      if (contain.includes(element)) {
+    contain.forEach((word) => {
+      if (element.includes(word)) {
         total++;
-      }
-  });
+      } 
+  }) 
+ });  
+
 console.log(total)
 
 // (7)
