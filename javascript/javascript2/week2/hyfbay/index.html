@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HyfBay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f44cd04f18.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <main>
+        <div id="searchItem">
+                <i class="fas fa-search"></i>
+                <label for="searchProduct"></label>
+                <input id="searchProduct" name="searchProduct" placeholder="Search by product">
+                <label for="seachPrice"></label>
+                <input id="searchPrice" name="searchPrice" placeholder="Fill in maximum price">
+            <select id="sorting">
+                <option value="">--Sorting--</option>
+                <option value="lowest">Lowest</option>
+                <option value="highest">Highest</option>
+            </select>
+        </div>
+
+        <div id="display"></div>
+    </main>
+
+    <script src="hyfBay.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
