@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f44cd04f18.js" crossorigin="anonymous"></script>
+    <title>Game</title>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+
+            <h1>Fastest Presser</h1>
+            <div>
+                <div>
+                    <input id="insertTime" class="insert-time" placeholder="set seconds" type="number" min="1" max="10">
+                </div>
+                <button id="startGameBtn" class="start-game-btn">Starts game!</button>                
+            </div>
+
+            <h2 id="countD"></h2>
+
+            <p id="countDownNum"></p>
+
+            <div class="game-section">
+                <div id="sectionS">
+                    <canvas id="my-canvas-s"></canvas>
+                    <h6>Press S</h6>
+                    <div id="displayWinnerS"><i class="fas fa-crown"></i></div>
+                    <p id="displayS"></p>  
+                </div>
+                <div id="sectionL"> 
+                    <canvas id="my-canvas-l"></canvas>
+                    <h6>Press L</h6>
+                    <div id="displayWinnerL"><i class="fas fa-crown"></i></div>
+                    <p id="displayL"></p>   
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.13/dist/index.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
