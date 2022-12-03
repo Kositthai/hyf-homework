@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spirit Animal gernerator</title>
+</head>
+<body>
+
+    <p>Choose method how to gernerate spirit name</p>
+    <form id="selectMethodForm">
+        <input type="radio" id="clickMethod"  name="method" value="click">
+        <label for="clickMethod">clicks the button</label><br>
+        <input type="radio" id="hoverMethod"  name="method" value="hover">
+        <label for="hoverMethod">hovers the input field</label><br>  
+        <input type="radio" id="writtenMethod"  name="method" value="text">
+        <label for="writtenMethod">text is written in the input field</label><br><br>
+    </form>
+
+    <div id="generateSpiritSection"> 
+        <button id="gernerate-btn">Get spirit name</button>  
+    </div>
+
+    <p id="displaySpiritName"></p>
+
+    <script src="spirit_animal.js"></script>
+</body>
+</html>
