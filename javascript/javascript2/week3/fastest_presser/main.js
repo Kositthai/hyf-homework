@@ -2,8 +2,6 @@ const startGameBtn = document.getElementById("startGameBtn");
 const insertTime = document.getElementById("insertTime");
 const displayL = document.getElementById("displayL");
 const displayS = document.getElementById("displayS");
-const sectionL = document.getElementById("sectionL");
-const sectionS = document.getElementById("sectionS");
 const displayWinnerL = document.getElementById("displayWinnerL");
 const displayWinnerS = document.getElementById("displayWinnerS");
 const myCanvasS = document.getElementById("my-canvas-s");
@@ -66,28 +64,24 @@ function startGame() {
         countDownGame(); 
 
         setTimeout(() => {
-        if (countS > countL) {
-                confettiS.render();
-                resetCounter();
-                    displayWinnerS.style.display = "block";
-                    myCanvasS.style.display = "block"; 
-
-        } else if (countL > countS) {
-                confettiL.render();
-                resetCounter();
-                    displayWinnerL.style.display = "block";
-                    myCanvasL.style.display = "block";
-     
-        } else if (countL === 0 && countS === 0) {
-                alert("You have to press L or S to get a score!");
-                resetCounter();
-
-        } else if (countL === countS) {
-                alert("It was a draw!");
-                resetCounter();
-        }
-
+            if (countS > countL) {
+                    confettiS.render();
+                    resetCounter();
+                        displayWinnerS.style.display = "block";
+                        myCanvasS.style.display = "block"; 
+            } else if (countL > countS) {
+                    confettiL.render();
+                    resetCounter();
+                        displayWinnerL.style.display = "block";
+                        myCanvasL.style.display = "block";   
+            } else if (countL === 0 && countS === 0) {
+                    alert("You have to press L or S to get a score!");
+                    resetCounter();
+            } else if (countL === countS) {
+                    alert("It was a draw!");
+                    resetCounter();
+            }
         }, getValue * 1000);
 
   } else alert("Please set the time!");
-}
+}; 
