@@ -1,59 +1,44 @@
-const userName = [];
-const spiriteName = ["The Stalking Patrol", "The Snoring Keeper", "The Watching Butcher", "Stoneweaver", "Oceanlove", "Riverspirit", "The Ivory Shepherd", "Shaydo", "The Black Musician", "The Shy Wizard",];
+const spiriteName = ["The Stalking Patrol", "The Snoring Keeper", "The Watching Butcher", "Stoneweaver", "Oceanlove", "Riverspirit", "The Ivory Shepherd", "Shaydo", "The Black Musician","The Shy Wizard"];
 const createForm = document.createElement("input");
-const myForm = document.getElementById("myForm");
-const changeSpirit = document.getElementById('change-spirit'); 
-const generateBtn = document.getElementById('gernerate-btn')
-const getInput = document.querySelector('#selectMethodForm');
-const test = document.querySelectorAll('input[name="method"]:checked'); 
+const generateSpiritSection = document.getElementById("generateSpiritSection");
+const generateBtn = document.getElementById("gernerate-btn");
+const changeSpirit = document.getElementById("change-spirit");
+const selectMethodForm = document.querySelector("#selectMethodForm");
+let theName = "";
 
-changeSpirit.addEventListener('click', changeSpiritName); 
-
-getInput.addEventListener('click', () => {
-
+selectMethodForm.addEventListener("click", () => {
     const inputValue = document.querySelectorAll('input[name="method"]:checked');
-    let method; 
+    let method;
 
-    for(const element of inputValue) {method = element.value;} 
-
-   if(method === 'click'){
-        generateBtn.addEventListener('click', submitTheForm); 
-        createForm.removeEventListener('mouseover', submitTheForm);
-        createForm.removeEventListener('keypress', submitTheForm);   
-   } else if(method === 'hover'){   
-       createForm.addEventListener('mouseover', submitTheForm); 
-       generateBtn.removeEventListener('click', submitTheForm); 
-       createForm.removeEventListener('keypress', submitTheForm);   
-   } else if(method === 'text'){
-        createForm.addEventListener('keypress', submitTheForm); 
-        generateBtn.removeEventListener('click', submitTheForm);  
-        createForm.removeEventListener('mouseover', submitTheForm); 
-   }      
-}); 
-
-function submitTheForm(){
-
-    const theName = createForm.value;
-    const displaySpiritName = document.getElementById("displaySpiritName");
-    const getrandomNumber = Math.floor(Math.random() * 10); 
-
-    if(theName !== '') {
-        userName.push(theName);  
-        displaySpiritName.innerHTML = `${userName[userName.length -1]} - ${spiriteName[getrandomNumber]}`;
-    }     
-}; 
-
-function changeSpiritName() {
-      
-    const getrandomNumber = Math.floor(Math.random() * 10); 
-
-    if(userName.length === 0){
-        return alert('please fill in name'); 
-    } else {
-        displaySpiritName.innerHTML = `${userName[userName.length -1]} - ${spiriteName[getrandomNumber]}`;
+    for (const element of inputValue) {
+        method = element.value;
     }
+
+    if (method === "click") {
+        generateBtn.addEventListener("click", spiritNameGenerator);
+        createForm.removeEventListener("mouseover", spiritNameGenerator);
+        createForm.removeEventListener("keypress", spiritNameGenerator);
+    } else if (method === "hover") {
+        createForm.addEventListener("mouseover", spiritNameGenerator);
+        generateBtn.removeEventListener("click", spiritNameGenerator);
+        createForm.removeEventListener("keypress", spiritNameGenerator);
+    } else if (method === "text") {
+        createForm.addEventListener("keypress", spiritNameGenerator);
+        generateBtn.removeEventListener("click", spiritNameGenerator);
+        createForm.removeEventListener("mouseover", spiritNameGenerator);
+    } 
+});
+
+function spiritNameGenerator() {
+    theName = createForm.value;
+    const displaySpiritName = document.getElementById("displaySpiritName");
+    const getrandomNumber = Math.floor(Math.random() * 10);
+        if (theName !== "") {
+            displaySpiritName.innerHTML = `${theName} - ${spiriteName[getrandomNumber]}`;
+        } else {
+            return alert("Please fill in name!");
+        }
 }
 
-myForm.append(createForm); 
-myForm.appendChild(displaySpiritName);
-
+generateSpiritSection.append(createForm);
+generateSpiritSection.appendChild(displaySpiritName);
