@@ -1,0 +1,32 @@
+{
+ "personalInformation": {
+    "firstName": "John", 
+    "lastName": "Dow", 
+    "Age": 35, 
+    "Marriage": true, 
+    "Children": null, 
+    "Sibling": {
+                "Brother": {
+                    "firstName": "Joe", 
+                    "lastName": "Dow", 
+                    "Age": 39,
+                    "Marriage": true
+                }, 
+                "Sister": [
+                    {
+                    "firstName": "Jane", 
+                    "lastName": "Dow", 
+                    "Age": 30,
+                    "Marriage": false
+                }, 
+                {
+                    "firstName": "Jeny", 
+                    "lastName": "Dow", 
+                    "Age": 28,
+                    "Marriage": false
+                }
+            ]
+        }, 
+    "FavoriteSeries": ["After Life", "Vikings", "Squip Game"]
+ }
+}
