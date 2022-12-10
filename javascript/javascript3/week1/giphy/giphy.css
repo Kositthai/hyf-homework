@@ -1,0 +1,39 @@
+body {
+  color: whitesmoke;
+  background: rgba(0, 0, 0, 0.802);
+}
+
+.input-keyword {
+  margin: auto;
+  text-align: center;
+}
+
+.input-numberGIF {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 0;
+}
+
+input {
+  padding: 1em;
+  border-radius: 0.8em;
+  text-align: center;
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#searchBtn {
+  margin: 1.5em;
+  border-radius: 0.5em;
+  background: rgb(237, 65, 185);
+  color: white;
+  padding: 1em;
+  outline: none;
+}
+
+#displayGIFs {
+  width: 80%;
+  margin: auto;
+}
