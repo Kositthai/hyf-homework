@@ -1,0 +1,120 @@
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+#container {
+    width: 30%;  
+    margin: auto;
+    margin-top: 3em;
+    padding: 2em;
+    text-align: center;
+}
+
+.main {
+    height: 95%;
+    border-radius: 1em;
+    padding-bottom: 3em;
+}
+
+.input-wraper {
+    position: relative;
+}
+
+input {
+    padding: 0.5em 3.5em;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+    border-radius: 0.8em;
+}
+
+input:focus {
+    border-radius: 0;
+    transition: border-radius 0.5s;
+    box-shadow: -4px 0px 13px 0px rgba(217, 215, 215, 0.75); /* get box-shoadow generate from https://cssgenerator.org/box-shadow-css-generator.html */
+}
+
+.input {
+    display: flex;
+    padding-top: 3em;
+    justify-content: center;  
+}
+
+.display-section {
+    margin-top: 3em;
+}
+
+#weatherBtn, #currentLocationBtn {
+    padding: 0.5em 1em;
+    background: #222;
+    color: whitesmoke;
+    border-radius: 0.5em;
+}
+
+#icon {
+    width: 20%;
+}
+
+#paraCity {
+    font-size: 3em;
+    font-weight: bolder;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#paraTemp {
+    font-size: 2.5em;
+    font-weight: bolder;
+    margin: 0;
+}
+
+#paraDesWeather {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.more-info {  
+    display: flex;
+    flex-direction:row; 
+    flex-wrap: wrap;
+    gap: 5px;
+    color: rgb(73, 73, 73);
+    justify-content: space-evenly;
+    padding: 0.5em;
+}
+
+#sunrise, #sunset, #windSpeed, #cloudiness {
+    border-radius: 1em;
+    padding: 1.5em;
+}
+
+#sunrise p, #sunset p, #windSpeed p, #cloudiness p {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#sunrise span, #sunset span, #windSpeed span, #cloudiness span, #location {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#mapWrapper{
+    width: 85%;
+    padding: 0.5em;
+    margin: auto;
+    border-radius: 1em;
+}
+
+#mapid {
+    width: 100%;
+    height: 150px;
+    margin: 1.5em 0;
+    border-radius: 1em;
+}
+
+#location {
+    text-align: left;
+    color: rgb(73, 73, 73);
+    margin-bottom: 0;
+}
+
+
+
