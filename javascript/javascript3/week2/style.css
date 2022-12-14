@@ -1,0 +1,80 @@
+body {
+    background: rgb(245, 245, 247);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:  rgb(49, 49, 49);
+}
+
+.container {
+    margin-top: 5em;
+}
+
+.convert-wrapper {
+    width: 50%;
+    border-radius: 1em;
+    margin: auto;
+    padding-bottom: 2em;
+}
+
+.convert-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.convert-flex {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.convert-from, .convert-to{
+    text-align: center;
+}   
+
+.input, .convert-from, .convert-to {
+    width: 20em;
+    height:30px;
+    border-radius: 0.3em;
+    text-indent: 1em;
+    border: 2px solid gray;
+    box-shadow: 0px -1px 9px 0px rgb(244, 243, 243);
+}
+
+.input:focus {
+    border: 2px solid #164db4;
+    outline: none;
+}
+
+.btn {
+    background-color:  #164db4;
+    border-radius: 0.3em;
+    border: none;
+    padding: 0.8em;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+.display-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.displayCurrency {
+    margin-left: 1em;
+    color: #164db4;
+}
+
+.displayCurrency h2 {
+    color: rgb(49, 49, 49);
+}
+
+h1 {
+    text-align: center;
+    color:  #164db4;
+    padding-top: 2em;
+}
+
+label {
+    margin: 0.5em 0;
+}
