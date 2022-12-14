@@ -30,14 +30,14 @@ const createOption = async () => {
             if(options.value === 'EUR'){
                     options.selected = true;
             }
-    }
+        }
 
     const optionTwo = convertTo.querySelectorAll('option')
         for(options of optionTwo){
             if(options.value === 'DKK'){
                     options.selected = true;
             }
-    }
+        }
 }
 
 createOption()
@@ -58,19 +58,22 @@ const fetchFunc = async (search) => {
     }   
 }
 
-
 const currencyApp = async() => {
     const inputValue = inputEl.value;
     const convertToValue = convertTo.value; 
     const convertFromValue = convertFrom.value; 
     const fetchData = await fetchFunc(convertFromValue); 
 
+    if(inputValue > 0){
     const rateSelector = fetchData.rates[convertToValue]; // because of convertToValue is a variable so we need to use braceket notation in this case. 
                 const amount = rateSelector * inputValue; 
                 
                 displayCurrency.innerHTML = 
                     `<p>${inputValue} ${convertFromValue} =</p>
                     <h2>${amount} ${convertToValue}</h2>`;
+    } else {
+        alert('Please insert amount to convert')
+    }
 }
 
 btn.addEventListener('click', currencyApp)
