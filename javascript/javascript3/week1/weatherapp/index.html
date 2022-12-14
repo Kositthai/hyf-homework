@@ -13,34 +13,36 @@
 </head>
 <body>
 
-    <div id="container">       
+    <div id="container" class="container">       
         <div class="main" id="main">        
             <div class="input">
                 <div class="input-wrapper">
+                    <label for="input"></label>
                     <input id="input" placeholder="Search for a city...">
-                    <button id="weatherBtn">Search</button>
+                    <button id="weatherBtn" class="weather-btn">Search</button>
                 </div>      
             </div>
             <div class="display-section">
-                <p id="paraCity"></p>
-                <img id="icon">
-                <p id="paraTemp"></p>
-                <p id="paraDesWeather"></p>
+                <p id="paraCity" class="paragrah-city"></p>
+                <img id="icon" class="icon">
+                <p id="paraTemp" class="paragrah-temp"></p>
+                <p id="paraDesWeather" class="paragrah-des-weather"></p>
             </div>
             <div class="more-info">
-                <div id="sunrise"></div>
-                <div id="sunset"></div>
-                <div id="windSpeed"></div>
-                <div id="cloudiness"></div>
+                <div id="sunrise" class="sunrise"></div>
+                <div id="sunset" class="sunset"></div>
+                <div id="windSpeed" class="wind-speed"></div>
+                <div id="cloudiness" class="cloudiness"></div>
             </div>           
             <div id="mapSection">
-                <div id="mapWrapper">
+                <div id="mapWrapper" class="map-wrapper">
                     <div id="mapid"></div>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="secreat.js"></script>
     <script src="main.js"></script>
     
 </body>
