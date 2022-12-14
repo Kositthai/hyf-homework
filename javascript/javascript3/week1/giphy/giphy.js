@@ -14,12 +14,12 @@ function searchGIF(){
     
     const keyword = input.value;  
     const numberOfGIFs = inputGIFsNumber.value;  
-    let url = 'https://api.giphy.com/v1/gifs/search?q=' + keyword + '&api_key=VfAqDgD4YHbcPlyELNlOFIYYQLaHlMYF';
+    let url = 'https://api.giphy.com/v1/gifs/search?q=' + keyword + '&api_key=' + API_KEY;
     // clear content with parent element instead of child element. this will remove img tag from displayGIFs. once, its removed then the img will also disappear.
     displayGIFs.innerHTML = ''; 
 
         if(numberOfGIFs !== '' && keyword !== '') {
-                url = 'https://api.giphy.com/v1/gifs/search?q=' + keyword + '&limit='+ numberOfGIFs + '&api_key=VfAqDgD4YHbcPlyELNlOFIYYQLaHlMYF';
+                url = 'https://api.giphy.com/v1/gifs/search?q=' + keyword + '&limit='+ numberOfGIFs + '&api_key=' + API_KEY;
                 displayImg(url)
         } else if (keyword !== ''){
                 displayImg(url)
