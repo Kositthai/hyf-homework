@@ -2,7 +2,7 @@ body {
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-#container {
+.container {
     width: 30%;  
     margin: auto;
     margin-top: 3em;
@@ -42,31 +42,31 @@ input:focus {
     margin-top: 3em;
 }
 
-#weatherBtn, #currentLocationBtn {
+.weather-btn {
     padding: 0.5em 1em;
     background: #222;
     color: whitesmoke;
     border-radius: 0.5em;
 }
 
-#icon {
+.icon {
     width: 20%;
 }
 
-#paraCity {
+.paragrah-city {
     font-size: 3em;
     font-weight: bolder;
     margin-bottom: 0;
     margin-top: 0;
 }
 
-#paraTemp {
+.paragrah-temp {
     font-size: 2.5em;
     font-weight: bolder;
     margin: 0;
 }
 
-#paraDesWeather {
+.paragrah-des-weather {
     font-size: 2em;
     font-weight: bold;
 }
@@ -81,17 +81,17 @@ input:focus {
     padding: 0.5em;
 }
 
-#sunrise, #sunset, #windSpeed, #cloudiness {
+.sunrise, .sunset, .wind-speed, .cloudiness {
     border-radius: 1em;
     padding: 1.5em;
 }
 
-#sunrise p, #sunset p, #windSpeed p, #cloudiness p {
+.sunrise p, .sunset p, .wind-speed p, .cloudiness p {
     font-size: 2em;
     font-weight: bold;
 }
 
-#sunrise span, #sunset span, #windSpeed span, #cloudiness span, #location {
+.sunrise span, .sunset span, .windSpeed span, .cloudiness span, #location {
     font-size: 1em;
     font-weight: bold;
 }
@@ -115,6 +115,3 @@ input:focus {
     color: rgb(73, 73, 73);
     margin-bottom: 0;
 }
-
-
-
