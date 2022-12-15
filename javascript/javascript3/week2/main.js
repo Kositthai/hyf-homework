@@ -6,11 +6,25 @@ const displayCurrency = document.getElementById('displayCurrency');
 
 // display option accroding to currency in rates
 const createOption = async () => {
-    const response = await fetch('https://open.er-api.com/v6/latest/USD')
-    const data = await response.json()
-    const rates = data.rates; 
-    const keys = Object.keys(rates); 
+    try {
+        const response = await fetch('https://open.er-api.com/v6/latest/USD')
+            if(response.status !== 200 ){
+                throw new Error('something went wrong')
+            }
+                const data = await response.json()
+                const rates = data.rates; 
+                const keys = Object.keys(rates); 
+                createOptions(keys) 
+            } catch(error){
+                alert(`Sorry, there was a problem with the operation.`)
+                console.log(error.message)
+                return error.message; 
+            }
+}
 
+createOption()
+
+const createOptions = (keys) => {
     keys.forEach(options => {
         // create opt1 & opt2 to not make it overwritten each other 
         // because if we createElement only one time, the convertTo element will overwritten convertFrom.
@@ -40,10 +54,7 @@ const createOption = async () => {
         }
 }
 
-createOption()
-
-const fetchFunc = async (search) => {
-    
+const fetchFunc = async (search) => {   
     try {
         const response = await fetch(`https://open.er-api.com/v6/latest/${search}`)
             if(response.status !== 200){
