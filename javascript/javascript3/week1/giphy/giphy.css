@@ -3,28 +3,29 @@ body {
   background: rgba(0, 0, 0, 0.802);
 }
 
-.input-keyword {
+.searchKeywordSection
+ {
   margin: auto;
   text-align: center;
 }
 
-.input-numberGIF {
+.searchGIFsNumber {
   text-align: center;
   margin-bottom: 2em;
   margin-top: 0;
 }
 
-input {
+.inputKeyword, .inputGIFsNumber {
   padding: 1em;
   border-radius: 0.8em;
   text-align: center;
 }
 
-h1 {
+.headerName {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#searchBtn {
+.searchBtn {
   margin: 1.5em;
   border-radius: 0.5em;
   background: rgb(237, 65, 185);
@@ -33,7 +34,7 @@ h1 {
   outline: none;
 }
 
-#displayGIFs {
+.displayGIFs {
   width: 80%;
   margin: auto;
 }

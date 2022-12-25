@@ -5,45 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet"> <!--font google-->
-    <script src="https://kit.fontawesome.com/f44cd04f18.js" crossorigin="anonymous"></script>  <!--font awesome-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f44cd04f18.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <title>Weather App</title>
 </head>
 <body>
 
-    <div id="container" class="container">       
-        <div class="main" id="main">        
-            <div class="input">
-                <div class="input-wrapper">
-                    <label for="input"></label>
-                    <input id="input" placeholder="Search for a city...">
-                    <button id="weatherBtn" class="weather-btn">Search</button>
-                </div>      
+    <div id="container" class="container">
+        <h1>WEATHER CHECKING</h1>
+        <div class="main" id="main">
+            <div class="inputWrapper">
+                <label for="inputElement"></label>
+                <input id="inputElement" class="inputElement" placeholder="Search for a city...">
+                <button id="weatherBtn" class="weatherBtn">Search</button>
             </div>
-            <div class="display-section">
-                <p id="paraCity" class="paragrah-city"></p>
+            <div class="displaySection">
+                <p id="paraCity" class="paragrahCity"></p>
                 <img id="icon" class="icon">
-                <p id="paraTemp" class="paragrah-temp"></p>
-                <p id="paraDesWeather" class="paragrah-des-weather"></p>
+                <p id="paraTemp" class="paragrahTemp"></p>
+                <p id="paraDesWeather" class="paragrahDesWeather"></p>
             </div>
-            <div class="more-info">
+            <div class="more-info" id="moreInfo">
                 <div id="sunrise" class="sunrise"></div>
                 <div id="sunset" class="sunset"></div>
-                <div id="windSpeed" class="wind-speed"></div>
+                <div id="windSpeed" class="windSpeed"></div>
                 <div id="cloudiness" class="cloudiness"></div>
-            </div>           
+            </div>
             <div id="mapSection">
-                <div id="mapWrapper" class="map-wrapper">
+                <div id="mapWrapper">
                     <div id="mapid"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="secreat.js"></script>
+    <script src="secrets.js"></script>
     <script src="main.js"></script>
-    
+
 </body>
 </html>
