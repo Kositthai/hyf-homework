@@ -7,26 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Screenshot App</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="listDivBtn">
-            <button id="listBtn" class="listBtn">A list of your screenshots</button>
+        <div class="list-btn-section">
+            <button id="list-btn" class="list-btn">A list of your screenshots</button>
         </div>
-        <div class="formElements">
-            <label for="inputURL" class="formLabel">URL Link</label>
-            <input id="inputURL" class="inputEl" placeholder="Enter URL link">
-            <button id="btn" class="submitBtn">Submit</button>
+        <div class="generate-screenshot-section">
+            <label for="url-input">URL Link</label>
+            <input type="url" name="url-input" id="url-input" placeholder="Enter URL link">
+            <button id="submit-btn" class="submit-btn">Submit</button>
         </div>
 
-        <div id="renderDiv" class="renderDiv"></div>
+        <div id="display-screenshot" class="display-screenshot"></div>
 
-        <div id="renderTheList" class="renderTheList"></div>
+        <div id="display-screenshots-list" class="display-screenshots-list"></div>
     </div>
 
-    <script src="secret.js"></script>
+    <script src="secrets.js"></script>
     <script src="app.js"></script>
 </body>
 
