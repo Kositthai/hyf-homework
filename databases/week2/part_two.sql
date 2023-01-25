@@ -6,23 +6,23 @@ USE `hw_lesson2_part2`;
 
 CREATE TABLE class (
 	id INT(10)NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-    class_name VARCHAR(255) NOT NULL, 
+    class_name VARCHAR(35) NOT NULL, 
     class_begins DATE NOT NULL, 
     class_ends DATE NOT NULL 
 ); 
 
 CREATE TABLE student (
 	id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-    name VARCHAR(255) NOT NULL, 
-    email VARCHAR(255) UNIQUE NOT NULL, 
-    phone VARCHAR(255) NULL,
+    name VARCHAR(35) NOT NULL, 
+    email VARCHAR(35) UNIQUE NOT NULL, 
+    phone VARCHAR(20) NULL,
     class_id INT(10) NOT NULL, 
     CONSTRAINT fk_class_id FOREIGN KEY (class_id) REFERENCES class(id)
 );
 
 CREATE TABLE status (
 	id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-	name VARCHAR(255) NOT NULL 
+	name VARCHAR(35) NOT NULL 
 ); 
 
 CREATE INDEX name ON student(name); 
