@@ -1,9 +1,5 @@
 USE hyf_lesson2; 
 
-SELECT *  FROM user; 
-SELECT * FROM task; 
-SELECT * FROM status; 
-
 -- Add a task with these attributes: title, description, created, updated, due_date, status_id, user_id --
 INSERT INTO `task`(title, description, created, updated, due_date, status_id, id)
 	VALUES('Study DB', 'Do homework', '2023-01-15 20:17:00', '2023-01-20 12:00:00', NULL , 1, 36);  
