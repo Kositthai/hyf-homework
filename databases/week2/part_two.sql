@@ -6,9 +6,9 @@ USE `hw_lesson2_part2`;
 
 CREATE TABLE class (
 	id INT(10)NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-    class_name VARCHAR(35) NOT NULL, 
-    class_begins DATE NOT NULL, 
-    class_ends DATE NOT NULL 
+    name VARCHAR(35) NOT NULL, 
+    begins DATE NOT NULL, 
+    ends DATE NOT NULL 
 ); 
 
 CREATE TABLE student (
@@ -37,11 +37,11 @@ INSERT INTO status (id, name) VALUES (2, 'on going');
 INSERT INTO status (id, name) VALUES (3, 'finished'); 
 
 -- class table 
-INSERT INTO class (id, class_name, class_begins, class_ends, status) VALUES (1,'HTML and CSS', '01-10-22', '30-10-22', 3); 
-INSERT INTO class (id, class_name, class_begins, class_ends, status) VALUES (2,'Javascript', '01-11-22', '30-11-22', 3); 
-INSERT INTO class (id, class_name, class_begins, class_ends, status) VALUES (3,'Database', '01-12-22', '30-01-23', 2); 
-INSERT INTO class (id, class_name, class_begins, class_ends, status) VALUES (4,'Node.js', '01-02-23', '30-03-23', 1); 
-INSERT INTO class (id, class_name, class_begins, class_ends, status) VALUES (5,'React', '01-04-23','30-06-23', 1); 
+INSERT INTO class (id, name, begins, ends, status) VALUES (1,'HTML and CSS', '01-10-22', '30-10-22', 3); 
+INSERT INTO class (id, name, begins, ends, status) VALUES (2,'Javascript', '01-11-22', '30-11-22', 3); 
+INSERT INTO class (id, name, begins, ends, status) VALUES (3,'Database', '01-12-22', '30-01-23', 2); 
+INSERT INTO class (id, name, begins, ends, status) VALUES (4,'Node.js', '01-02-23', '30-03-23', 1); 
+INSERT INTO class (id, name, begins, ends, status) VALUES (5,'React', '01-04-23','30-06-23', 1); 
 
 -- student table -- 
 INSERT INTO student (id, name, email, phone, class_id) VALUES (1,'John', 'john@test.com', '12-34-56-78', 3);
