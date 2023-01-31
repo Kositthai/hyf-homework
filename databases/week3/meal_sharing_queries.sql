@@ -57,7 +57,7 @@ FROM meal
 WHERE price <= 60; 
 
 -- Get meals that still has available reservations
-SELECT meal.title, (meal.max_reservation - SUM(number_of_guests)) AS available_reservations 
+SELECT meal.title, (meal.max_reservation - SUM(reservation.number_of_guests)) AS available_reservations 
 FROM reservation JOIN meal ON meal.id = reservation.meal_id 
 GROUP BY meal.id HAVING available_reservations != 0 
 ORDER BY available_reservations ASC;  
