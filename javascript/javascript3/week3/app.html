@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Screenshot App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="list-btn-section">
+            <button id="list-btn" class="list-btn">A list of your screenshots</button>
+        </div>
+        <div class="generate-screenshot-section">
+            <label for="url-input">URL Link</label>
+            <input type="url" name="url-input" id="url-input" placeholder="Enter URL link">
+            <button id="submit-btn" class="submit-btn">Submit</button>
+        </div>
+
+        <div id="display-screenshot" class="display-screenshot"></div>
+
+        <div id="display-screenshots-list" class="display-screenshots-list"></div>
+    </div>
+
+    <script src="secrets.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
