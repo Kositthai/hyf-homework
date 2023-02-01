@@ -1,16 +1,19 @@
-const inputStrings = process.argv.splice(2);
-const inputNumbers = inputStrings.map((number) => parseFloat(number));
-const areANumbers = inputNumbers.map((number) => isNaN(number));
+// Take values from argument
+const inputString = process.argv.splice(2);
+// Using the value that received calcurate average of number by reduce method and devide the length of numbers
+const average = inputString
+    .map((string) => parseFloat(string))
+    .reduce((sum, current) => sum + current, 0) / inputString.length;
 
-const sum = inputNumbers.reduce((sum, current) => sum + current, 0);
-const average = (sum / inputNumbers.length).toFixed(2);
-
-if (inputStrings.length != 0) {
-  if (areANumbers.includes(true)) {
-    console.log("You can only pass numbers");
+// Check if there any values passing through the argument
+// and check if the values that we received is a number?  ** isNaN method will return true is values is not-a-number (undefined, Nan = true)
+// otherwise log(average)
+if (inputString.length != 0) {
+  if (isNaN(average)) {
+    console.log("Please fill in only numbers...");
   } else {
-    console.log(`Average: ${average}`);
+    console.log(average.toFixed(2));
   }
 } else {
-  console.log("Please fill in at least two numers");
+  console.log("Please filll in at least two numbers...");
 }
