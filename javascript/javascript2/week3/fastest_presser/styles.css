@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Staatliches&display=swap');
+
+body {
+    color: whitesmoke;
+    font-family: 'Staatliches', cursive;
+}
+
+.container {
+    width: 50%;
+    height: 50em;
+    text-align: center;
+    background-color: #222;
+    margin: 5em auto 5em auto;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Bungee Inline', cursive;
+    padding-top: 2em;
+    color: whitesmoke;
+}
+
+h6 {
+    font-size: 2em;
+    animation: jump 0.5s linear infinite;
+    transform:  rotate(5deg);
+    color: yellow;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+}
+
+.insert-time {
+    width: 20%;
+    height: 2em;
+    background: whitesmoke; 
+    text-align: center;
+    border-radius: 1em;
+}
+
+.insert-time:focus {
+    transition: border-radius 0.5s;
+    border-radius: 0.5em; 
+}
+
+.start-game-btn {
+    background: red;
+    width: 10%;
+    height: 3em;
+    cursor: pointer;
+    font-family: 'Staatliches', cursive;
+    font-size: 1em;
+    margin-top: 2em;
+}
+
+.start-game-btn:hover {
+    transform: scale(1.1);  
+}
+
+.game-section {
+    display: flex;
+    position: relative;
+    height: 55%;
+}
+
+@keyframes jump {
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+#displayL, #displayS {
+    font-size: 1.5em;
+}
+
+#my-canvas-l, #my-canvas-s {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#sectionS, #sectionL {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    border-right: 2px solid whitesmoke;
+    border-top: 2px solid whitesmoke;
+}
+
+#displayWinnerL, #displayWinnerS {
+    display: none;
+    color: yellow; 
+}
+
+
+
+
+
+
+

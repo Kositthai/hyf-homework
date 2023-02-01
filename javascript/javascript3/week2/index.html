@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
+    <title>Currency Convertor</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="convert-wrapper">
+            <h1>CURRENCY CONVERTOR</h1>
+            <div class="convert-section">
+                <div class="convert-flex">
+                    <label>Amount</label>
+                    <input type="text" id="amount-input" placeholder="Amount" value="1">
+                </div>
+                <div class="convert-flex">
+                    <label>From</label>
+                    <select id="convert-from"></select>
+                </div>
+                <div class="convert-flex">
+                    <label>To</label>
+                    <select id="convert-to"></select>
+                </div>
+            </div>
+            <div class="convert-btn-div">
+                <button id="convert-btn">CONVERT</button>
+            </div>
+            <div class="display-section">
+                <div id="display-currency" class="display-currency"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

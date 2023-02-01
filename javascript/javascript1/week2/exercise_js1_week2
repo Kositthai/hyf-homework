@@ -1,0 +1,104 @@
+// if sentence exercise //
+const balance = 1000;
+if (balance === 0) {
+  console.log("Please deposit some money!");
+} else if (balance > 0) {
+  console.log("Your balance is looking okay");
+} else if (balance > 1000) {
+  console.log("Your balance is looking good");
+} else if (balance > 3000) {
+  console.log("Your balance is fantastic");
+} else if (balance > 10000) {
+  console.log("Your balance is AMAZING!");
+}
+
+// Rewrite ternary operaor //
+
+/*
+let result;
+if (a + b < 4) {
+  result = 'Below';
+} else {
+  result = 'Over';
+}
+*/
+
+let result = 5;
+result < 4 ? "Below" : "Over";
+
+// Count down to new year //
+for (let i = 10; i >= 0; i--) {
+  if (i === 10) {
+    console.log("OMG");
+    continue;
+  }
+  if (i === 0) {
+    console.log("Happy new year");
+    continue;
+  }
+  console.log(i);
+}
+// count by sound //
+const friensList = [
+  "Chris",
+  "Anne",
+  "Colin",
+  "Terri",
+  "Phil",
+  "Lola",
+  "Sam",
+  "Kay",
+  "Bruce",
+];
+let count = 0;
+
+for (i = 0; i < friensList.length; i++) {
+  if (friensList[i].includes("a")) {
+    count++;
+  } else {
+    console.log(friensList[i]);
+  }
+}
+console.log(count);
+
+// find Lola //
+for (i = 0; i < friensList.length; i++) {
+  if (friensList[i] === "Lola") {
+    console.log(i);
+  }
+}
+
+// find at least number //
+function min(a, b) {
+  if (min) {
+    console.log(Math.min(a, b));
+  }
+}
+
+min(2, 6);
+
+// get circlearea by radius //
+function circleArea(radius) {
+  const diameter = radius * 2;
+  const radiusExponent = radius ** 2;
+
+  if (circleArea) {
+    return (Math.PI * radiusExponent).toFixed(2);
+  } else {
+    console.log("Please fill in radius");
+  }
+}
+
+circleArea(10);
+
+// convert celcius to fahrenheit //
+
+function celciusToFahreneit(celcius) {
+  return celcius * 1.8 + 32;
+}
+celciusToFahreneit(28);
+
+// for loop exercise //
+for (i = 74; i <= 98; i++) {
+  console.log(i);
+}

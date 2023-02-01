@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background: white;
+    color: #222;
+}
+
+body,h1,h2 {
+    margin: 0;
+}
+
+input {
+    border: none;
+    background: #f5f5f5;
+    border-radius: 1em;
+    height: 3em;
+    text-indent: 1em;
+}
+
+input:focus {
+    background: white;
+    outline: none !important;
+    border-radius: 0.5em;
+    border: 1px solid #879778;
+    transition: border-radius 0.5s;
+    box-shadow: -4px 0px 13px 0px rgba(217, 215, 215, 0.75); /* get box-shoadow generate from https://cssgenerator.org/box-shadow-css-generator.html */
+}
+
+#searchItem {
+    text-align: center;
+    margin-top: 2em;
+}
+
+#searchProduct {
+    width: 30%;
+}
+
+#display {
+    margin: 5em;
+}
+
+select {
+    background: #a3b592;
+    border: none;
+    border-radius: 0.2em;
+    height: 3em;
+    color: white;
+    text-align: center;
+    outline: none;
+    width: 7%;
+}
