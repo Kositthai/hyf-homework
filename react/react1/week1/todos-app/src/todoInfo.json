@@ -1,0 +1,14 @@
+[
+  {
+    "description": "Get out of bed",
+    "deadline": "10-02-2023"
+  },
+  {
+    "description": "Brush teeth",
+    "deadline": "15-02-2023"
+  },
+  {
+    "description": "Eat breakfastd",
+    "deadline": "20-02-2023"
+  }
+]
