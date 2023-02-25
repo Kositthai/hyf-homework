@@ -1,9 +1,9 @@
 import React from 'react'; 
 
-export default function ToDoItem ({description, deadline}) {
+export default function ToDoItem ({item}) {
    return (
     <p>
-      {description} | {deadline}
+      {item.description} | {item.deadline}
     </p>
    )
 }
