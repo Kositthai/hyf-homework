@@ -18,7 +18,7 @@ export default function ToDosList({ todoItem }) {
   return (
     <div>
       <AddTodoHandler todo={todo} setTodo={setTodo} />
-      <ul className="list-group">{mapTodo()}</ul>
+      <ul>{mapTodo()}</ul>
     </div>
   );
 }
