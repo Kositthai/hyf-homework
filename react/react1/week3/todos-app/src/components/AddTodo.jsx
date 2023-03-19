@@ -44,6 +44,7 @@ export default function AddTodo({ setData }) {
           id="deadline"
           type={"date"}
           onChange={(e) => setDeadline(e.target.value)}
+          value={deadline}
         />
       </div>
 
