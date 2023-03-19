@@ -1,6 +1,10 @@
+import { nanoid } from 'nanoid'
+
 export default function AppTodoBtn({ todo, setTodo }) {
+  const nanoId = nanoid()
+
   const addTodoHandler = () => {
-    const newTodo = { id: Math.random() * 1000, description: "randomText" };
+    const newTodo = { id: nanoId, description: "randomText" };
     setTodo((previous) => [...previous, newTodo]);
   };
 

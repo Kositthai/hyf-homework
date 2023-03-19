@@ -5,7 +5,7 @@ import AddTodoHandler from "./AddTodoHandler";
 export default function ToDosList({ todoItem }) {
   const [todo, setTodo] = useState(todoItem);
 
-  const mapTodo = () => {
+  const renderTodos = () => {
     if (todo.length !== 0) {
       return todo.map((item, index) => (
         <ToDoItem key={index} item={item} todo={todo} setTodo={setTodo} />
@@ -18,7 +18,7 @@ export default function ToDosList({ todoItem }) {
   return (
     <div>
       <AddTodoHandler todo={todo} setTodo={setTodo} />
-      <ul>{mapTodo()}</ul>
+      <ul>{renderTodos()}</ul>
     </div>
   );
 }
