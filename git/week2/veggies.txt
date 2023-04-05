@@ -1,5 +1,5 @@
 Tomato
 Cucumber
-Lettuce
+Corn
 Chili 
 Asparagus
