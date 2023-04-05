@@ -1,7 +1,5 @@
 Tomato
 Cucumber
-Carrot
+Corn
 Chili 
 Asparagus
-Radish
-Broccoli
