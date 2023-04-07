@@ -24,15 +24,10 @@ export default function SearchProvider({ children }) {
         abortController.abort();
       };
   }, [query]);
-
-  const handleInputChange = (e) => setQuery(e.target.value);
-
-  const renderUser = () =>
-    userList?.map((user) => <p key={user.id}>{user.login}</p>);
-
+  
   return (
     <SearchingContext.Provider
-      value={{ query, userList, handleInputChange, loading, renderUser, error }}
+      value={{ query, setQuery, userList, loading, error }}
     >
       {children}
     </SearchingContext.Provider>
